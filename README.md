@@ -2,7 +2,7 @@
 
 Find every recurring subscription buried in your inbox, track it in one file, and cancel the ones you don't want — with Claude doing the searching, tracking, and clicking.
 
-SubReaper isn't an app you install. It's a **skill** (a set of instructions) that you hand to [Claude Code](https://claude.com/product/claude-code) or claude.ai. Claude does the actual work live, in your own Gmail and your own browser — nothing about your subscriptions ever leaves your machine or gets sent to a third-party server.
+SubReaper isn't an app you install. It's a **skill** (a set of instructions) that you hand to [Claude Code](https://claude.com/product/claude-code) or claude.ai. Claude does the actual work live, in your own Gmail and your own browser. There's no separate SubReaper server or database — nobody but you and Anthropic (as part of normal Claude usage, same as any other Claude conversation) ever sees your subscription data.
 
 ## What it does
 
