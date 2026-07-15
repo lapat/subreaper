@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SubReaper charges tracker",
+  "description": "One entry per recurring subscription/charge found during a sweep.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "amount", "currency", "billing_cycle", "status"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Short unique slug, e.g. 'netflix' or 'adobe-cc'"
+      },
+      "name": {
+        "type": "string",
+        "description": "Display name of the service"
+      },
+      "category": {
+        "type": "string",
+        "description": "Free-text grouping, e.g. 'streaming', 'AI tools', 'dev infra', 'insurance'"
+      },
+      "amount": {
+        "type": "number",
+        "description": "Most recent known charge amount"
+      },
+      "currency": {
+        "type": "string",
+        "description": "ISO 4217 code, e.g. 'USD'"
+      },
+      "billing_cycle": {
+        "type": "string",
+        "enum": ["monthly", "annual", "weekly", "quarterly", "other"]
+      },
+      "signin_method": {
+        "type": "string",
+        "description": "How the account is accessed, e.g. 'google', 'apple', 'email_password'"
+      },
+      "url": {
+        "type": "string",
+        "description": "Direct link to the billing/subscription management page"
+      },
+      "status": {
+        "type": "string",
+        "enum": ["active", "canceled", "needs_review"]
+      },
+      "first_seen_charge_date": {
+        "type": ["string", "null"],
+        "description": "Earliest charge date found, ISO 8601, or null if unknown"
+      },
+      "last_seen_charge_date": {
+        "type": ["string", "null"],
+        "description": "Most recent charge date found, ISO 8601, or null if unknown"
+      },
+      "evidence_gmail_query": {
+        "type": ["string", "null"],
+        "description": "The Gmail search that surfaced this charge, if applicable"
+      },
+      "evidence_snippet": {
+        "type": ["string", "null"],
+        "description": "Short quote or summary of the evidence found"
+      },
+      "cancel_notes": {
+        "type": ["string", "null"],
+        "description": "History, caveats, and exact steps taken if/when cancellation was attempted"
+      },
+      "last_updated": {
+        "type": "string",
+        "description": "ISO 8601 date this entry was last touched"
+      }
+    }
+  }
+}

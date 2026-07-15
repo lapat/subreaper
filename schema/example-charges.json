@@ -1,0 +1,53 @@
+[
+  {
+    "id": "streamflix",
+    "name": "StreamFlix",
+    "category": "streaming",
+    "amount": 15.49,
+    "currency": "USD",
+    "billing_cycle": "monthly",
+    "signin_method": "email_password",
+    "url": "https://streamflix.example.com/account/billing",
+    "status": "active",
+    "first_seen_charge_date": "2022-03-01",
+    "last_seen_charge_date": "2026-07-01",
+    "evidence_gmail_query": "\"your streamflix receipt\"",
+    "evidence_snippet": "Monthly receipt emails found continuously from 2022-03 through 2026-07, $15.49 each.",
+    "cancel_notes": null,
+    "last_updated": "2026-07-10"
+  },
+  {
+    "id": "cloudnote-pro",
+    "name": "CloudNote Pro",
+    "category": "productivity",
+    "amount": 8.0,
+    "currency": "USD",
+    "billing_cycle": "monthly",
+    "signin_method": "google",
+    "url": "https://cloudnote.example.com/settings/plan",
+    "status": "canceled",
+    "first_seen_charge_date": "2021-11-15",
+    "last_seen_charge_date": "2026-06-15",
+    "evidence_gmail_query": "cloudnote receipt",
+    "evidence_snippet": "Charged monthly since 2021; last charge 2026-06-15.",
+    "cancel_notes": "Canceled 2026-07-10 via cloudnote.example.com/settings/plan > Manage plan > Cancel. Declined a '3 months free' retention offer. Access continues until 2026-07-15, then downgrades to the free tier automatically.",
+    "last_updated": "2026-07-10"
+  },
+  {
+    "id": "fitmetrics",
+    "name": "FitMetrics",
+    "category": "health",
+    "amount": 59.99,
+    "currency": "USD",
+    "billing_cycle": "annual",
+    "signin_method": "apple",
+    "url": "https://account.apple.com/account/manage/section/subscriptions",
+    "status": "needs_review",
+    "first_seen_charge_date": "2024-01-20",
+    "last_seen_charge_date": "2026-01-20",
+    "evidence_gmail_query": null,
+    "evidence_snippet": "Found only via Apple subscriptions page, not Gmail — no receipt email exists for Apple IAP charges.",
+    "cancel_notes": "needs_review: renews annually on 2027-01-20. User should confirm they still want this before the renewal window closes.",
+    "last_updated": "2026-07-10"
+  }
+]
