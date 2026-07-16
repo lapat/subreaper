@@ -20,9 +20,14 @@ SubReaper isn't an app you install. It's a **skill** (a set of instructions) tha
 ## Quickstart
 
 1. Clone this repo (or just copy `SKILL.md` and `schema/` into a project).
-2. Open the project in Claude Code.
-3. Ask Claude to run a subscription sweep of your Gmail, using `SKILL.md` as the instructions and `schema/charges.schema.json` as the format for the tracker file it creates.
-4. Review the `charges.json` it produces. Ask it to cancel whatever you don't want, one at a time.
+2. **Run the self-test first**, before pointing this at your own inbox:
+   ```
+   python3 test/validate_schema.py
+   ```
+   No dependencies, no Gmail access, no setup — it just confirms the example tracker (`schema/example-charges.json`) matches the schema Claude will be asked to write to. You should see `PASS — 3 example entries all match schema/charges.schema.json`.
+3. Open the project in Claude Code.
+4. Ask Claude to run a subscription sweep of your Gmail, using `SKILL.md` as the instructions and `schema/charges.schema.json` as the format for the tracker file it creates.
+5. Review the `charges.json` it produces. Ask it to cancel whatever you don't want, one at a time.
 
 See `schema/example-charges.json` for what a populated tracker looks like (fake data).
 
